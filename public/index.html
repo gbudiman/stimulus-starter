@@ -2,10 +2,34 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="main.scss">
   <script src="bundle.js" async></script>
 </head>
 <body>
-  <h1 data-controller="example"></h1>
+  <div>
+    <div data-controller='fetch'>
+      <button
+        type='button'
+        data-target='fetch.button'
+        data-action='fetch#run'
+        disabled=true
+      >
+        Initializing
+      </button>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Branch</th>
+            <th>Name</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody data-target='fetch.event'>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </body>
 </html>
