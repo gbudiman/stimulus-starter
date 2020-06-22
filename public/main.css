@@ -1,0 +1,14 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.clickable {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.event-name {
+  text-align: center;
+  font-size: 18px;
+}

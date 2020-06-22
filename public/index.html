@@ -1,35 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="main.scss">
-  <script src="bundle.js" async></script>
-</head>
-<body>
-  <div>
-    <div data-controller='fetch'>
-      <button
-        type='button'
-        data-target='fetch.button'
-        data-action='fetch#run'
-        disabled=true
-      >
-        Initializing
-      </button>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="bundle.js" async></script>
+  </head>
+  <body>
+    <div>
+      <div data-controller="fetch">
+        <div>
+          <div data-target="fetch.eventName" class="event-name"></div>
+          <div data-target="fetch.tickets"></div>
+        </div>
 
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Branch</th>
-            <th>Name</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-        <tbody data-target='fetch.event'>
-        </tbody>
-      </table>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Branch</th>
+              <th>Name</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody data-target="fetch.event"></tbody>
+        </table>
+
+        <button
+          type="button"
+          data-target="fetch.button"
+          data-action="fetch#run"
+          disabled="true"
+        >
+          Initializing
+        </button>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
